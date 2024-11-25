@@ -1,0 +1,295 @@
+{
+    "children":[
+       {
+          "attributes":{
+             "class":"max-w-full prose w-full"
+          },
+          "children":[
+             {
+                "attributes":{
+                   "class":"block__heading"
+                },
+                "children":[
+                   {
+                      "attributes":{
+                         
+                      },
+                      "children":[
+                         {
+                            "content":"Unlocking the Future of Manufacturing",
+                            "type":"text"
+                         }
+                      ],
+                      "tagName":"h1",
+                      "type":"tag"
+                   },
+                   {
+                      "attributes":{
+                         "class":"text__date"
+                      },
+                      "children":[
+                         {
+                            "content":"5 August 2024",
+                            "type":"text"
+                         }
+                      ],
+                      "tagName":"div",
+                      "type":"tag"
+                   },
+                   {
+                      "attributes":{
+                         "class":"text__event"
+                      },
+                      "children":[
+                         {
+                            "content":"Melbourne Convention Centre",
+                            "type":"text"
+                         }
+                      ],
+                      "tagName":"div",
+                      "type":"tag"
+                   }
+                ],
+                "tagName":"section",
+                "type":"tag"
+             },
+             {
+                "attributes":{
+                   
+                },
+                "children":[
+                   {
+                      "content":"Who we are",
+                      "type":"text"
+                   }
+                ],
+                "tagName":"h2",
+                "type":"tag"
+             },
+             {
+                "attributes":{
+                   
+                },
+                "children":[
+                   {
+                      "content":"Karma Manufacturing excels in the intricate craft of building circuit boards and electronics, leveraging cutting-edge technology to ensure precision and reliability in every component. Our state-of-the-art manufacturing facilities are equipped to handle the complexities of circuit board assembly, from intricate designs to large-scale production. With a commitment to quality, our skilled technicians and engineers work seamlessly to bring innovation to life, making Karma Manufacturing a trusted name in the world of circuit board manufacturing.",
+                      "type":"text"
+                   }
+                ],
+                "tagName":"p",
+                "type":"tag"
+             },
+             {
+                "attributes":{
+                   
+                },
+                "children":[
+                   {
+                      "content":"At Karma Manufacturing, our dedication to excellence in circuit board and electronics manufacturing is matched only by our commitment to customer satisfaction. We understand that our clients rely on us for products that are not only of the highest quality but also delivered in a timely and efficient manner. Our team works closely with each client to ensure their unique needs are met, providing personalized attention and tailored solutions. From the initial concept to the final product, we stand by our clients every step of the way, offering support, guidance, and the expertise needed to turn their visions into reality. It is this unwavering dedication that sets us apart and makes us a leader in the industry.",
+                      "type":"text"
+                   }
+                ],
+                "tagName":"p",
+                "type":"tag"
+             },
+             {
+                "attributes":{
+                   "style":"font-weight:700"
+                },
+                "children":[
+                   {
+                      "content":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa doloribus minima obcaecati. Asperiores totam quisquam enim aperiam minima excepturi error cumque. Perspiciatis reiciendis vitae illum harum hic accusamus, aspernatur aliquam.",
+                      "type":"text"
+                   },
+                   {
+                      "attributes":{
+                         
+                      },
+                      "children":[
+                         {
+                            "content":"What we do",
+                            "type":"text"
+                         }
+                      ],
+                      "tagName":"h2",
+                      "type":"tag"
+                   },
+                   {
+                      "attributes":{
+                         "alt":"White robot arm offering handshake",
+                         "class":"content__image",
+                         "src":"https://assets-eu-01.kc-usercontent.com/a917b5bf-e2e1-011e-0a73-0b317b1e1c33/3efaba72-f8af-4e6f-ae02-15ca6d32f6b2/possessed-photography-jIBMSMs4_kA-unsplash.jpg?q=75&w=1920&lossless=true&auto=format"
+                      },
+                      "children":[
+                         
+                      ],
+                      "tagName":"img",
+                      "type":"tag"
+                   }
+                ],
+                "tagName":"p",
+                "type":"tag"
+             },
+             {
+                "attributes":{
+                   
+                },
+                "children":[
+                   {
+                      "content":"Karma Manufacturing excels in the intricate craft of building circuit boards and electronics, leveraging cutting-edge technology to ensure precision and reliability in every component. Our state-of-the-art manufacturing facilities are equipped to handle the complexities of circuit board assembly, from intricate designs to large-scale production. With a commitment to quality, our skilled technicians and engineers work seamlessly to bring innovation to life, making Karma Manufacturing a trusted name in the world of circuit board manufacturing.",
+                      "type":"text"
+                   }
+                ],
+                "tagName":"p",
+                "type":"tag"
+             },
+             {
+                "attributes":{
+                   
+                },
+                "children":[
+                   {
+                      "content":">Within our state-of-the-art facilities, precision is not just a goal—it's a guiding principle. Our skilled technicians and engineers, led by industry experts, meticulously assemble circuit boards with an unwavering commitment to quality. From intricate designs to large-scale production, each component is crafted with the utmost precision.",
+                      "type":"text"
+                   }
+                ],
+                "tagName":"p",
+                "type":"tag"
+             },
+             {
+                "attributes":{
+                   
+                },
+                "children":[
+                   {
+                      "content":"In the world of electronics, diversity is key. Whether it's a cutting-edge prototype or a high-volume production run, our facilities are equipped to handle a spectrum of designs. We thrive on challenges, turning them into opportunities to showcase our adaptability and expertise.",
+                      "type":"text"
+                   }
+                ],
+                "tagName":"p",
+                "type":"tag"
+             },
+             {
+                "attributes":{
+                   
+                },
+                "children":[
+                   {
+                      "content":"Our commitment to innovation extends beyond traditional manufacturing. Robotics plays a pivotal role in our processes, ensuring efficiency and accuracy. The seamless integration of robotics with electronics is a testament to our forward-thinking approach in creating products that stand at the intersection of technology and precision engineering.",
+                      "type":"text"
+                   }
+                ],
+                "tagName":"p",
+                "type":"tag"
+             },
+             {
+                "attributes":{
+                   "class":"learn-more__link"
+                },
+                "children":[
+                   {
+                      "attributes":{
+                         "href":"/learn-more"
+                      },
+                      "children":[
+                         {
+                            "content":"Learn More",
+                            "type":"text"
+                         }
+                      ],
+                      "tagName":"a",
+                      "type":"tag"
+                   },
+                   {
+                      "attributes":{
+                         
+                      },
+                      "children":[
+                         {
+                            "content":"Why we excel",
+                            "type":"text"
+                         }
+                      ],
+                      "tagName":"h2",
+                      "type":"tag"
+                   },
+                   {
+                      "attributes":{
+                         "class":"list"
+                      },
+                      "children":[
+                         {
+                            "attributes":{
+                               "class":"list__item"
+                            },
+                            "children":[
+                               {
+                                  "content":"Karma Manufacturing excels in the intricate craft of building circuit boards and electronics.",
+                                  "type":"text"
+                               }
+                            ],
+                            "tagName":"li",
+                            "type":"tag"
+                         },
+                         {
+                            "attributes":{
+                               "class":"list__item"
+                            },
+                            "children":[
+                               {
+                                  "content":"Our commitment to innovation extends beyond traditional manufacturing.",
+                                  "type":"text"
+                               }
+                            ],
+                            "tagName":"li",
+                            "type":"tag"
+                         },
+                         {
+                            "attributes":{
+                               "class":"list__item"
+                            },
+                            "children":[
+                               {
+                                  "content":"Within our state-of-the-art facilities, precision is not just a goal—it's a guiding principle.",
+                                  "type":"text"
+                               }
+                            ],
+                            "tagName":"li",
+                            "type":"tag"
+                         }
+                      ],
+                      "tagName":"ol",
+                      "type":"tag"
+                   }
+                ],
+                "tagName":"p",
+                "type":"tag"
+             },
+             {
+                "attributes":{
+                   
+                },
+                "children":[
+                   {
+                      "attributes":{
+                         "href":"kontent.ai"
+                      },
+                      "children":[
+                         {
+                            "content":"External Link",
+                            "type":"text"
+                         }
+                      ],
+                      "tagName":"a",
+                      "type":"tag"
+                   }
+                ],
+                "tagName":"p",
+                "type":"tag"
+             }
+          ],
+          "tagName":"div",
+          "type":"tag"
+       }
+    ]
+ }

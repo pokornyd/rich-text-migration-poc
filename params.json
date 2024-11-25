@@ -1,0 +1,5 @@
+{
+    "environmentId": "<envId>",
+    "apiKey": "<apiKey>",
+    "migrationsFolder": "./Migrations"
+  }
