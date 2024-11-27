@@ -39,6 +39,16 @@ const findNodeByClassName = (
     }, undefined);
 };
 
+/**
+ * callback method for transforming each node of the JSON tree back to MAPI compatible HTML, with ManagementClient provided via context.
+ * 
+ * leaves most nodes as-is, but eliminates unsupported attributes (class, style etc.).
+ * 
+ * for img nodes, bytes are retrieved by axios from `src` attribute and an asset subsequently upserted to kontent.ai environment using the
+ * two step process: https://kontent.ai/learn/docs/apis/openapi/management-api-v2/#tag/Assets. finally, the img node is transformed into <figure>,
+ * with data-asset-id attribute pointing to the previously uploaded asset.
+ * 
+ **/ 
 const transformNodeToMapiRichText: TransformNodeFunctionAsync<
   DomNode,
   { client: ManagementClient },
@@ -47,7 +57,7 @@ const transformNodeToMapiRichText: TransformNodeFunctionAsync<
   if (isElement(node)) {
     if (node.tagName === "img" && node.attributes.src) {
       try {
-        // Fetch the binary data
+        // fetch the image binary data
         const response = await axios.get(node.attributes.src, {
           responseType: "arraybuffer",
         });
@@ -73,7 +83,7 @@ const transformNodeToMapiRichText: TransformNodeFunctionAsync<
           type: "internal" as const,
         };
 
-        // Create the asset
+        // Create the asset object 
         const assetResponse = await context?.client
           .addAsset()
           .withData(() => ({
@@ -97,15 +107,19 @@ const transformNodeToMapiRichText: TransformNodeFunctionAsync<
       }
     }
 
-    const innerHtml = processedItems.join("");
+    if (node.tagName === "someothertag") {
+      // implement custom processing for other tags if needed...
+    }
 
-    return [
+    const innerHtml = processedItems.join(""); // already processed subnodes are returned as arrays. join them to get the full inner HTML.
+
+    return [ // for any other node than img, just create opening and closing tags and remove unsupported attributes.
       `<${node.tagName} ${serializeKnownAttributes(
         node.attributes
       )}>${innerHtml}</${node.tagName}>`,
     ];
   } else {
-    return [node.content];
+    return [node.content]; // for text nodes, just return their content
   }
 };
 
@@ -134,7 +148,7 @@ const allowedRichTextElementAttributes = [
   "data-phone-number",
 ];
 
-// Utility to serialize attributes to HTML
+// Utility to serialize attributes to HTML, removing the unsupported ones
 const serializeKnownAttributes = (
   attributes: Record<string, string | undefined>
 ): string =>
