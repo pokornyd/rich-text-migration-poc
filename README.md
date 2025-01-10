@@ -1,11 +1,11 @@
 # Rich Text Migration PoC
 
-A simple PoC for transforming HTML into valid Kontent.ai rich text using the `@kontent-ai/rich-text-resolver` package. The data-ops migration CLI is used to run the script and upsert data into Kontent.ai.
+A simple PoC for transforming HTML into valid Kontent.ai rich text using the [`@kontent-ai/rich-text-resolver`](https://github.com/kontent-ai/rich-text-resolver-js/tree/vNext) package. The data-ops migration CLI is used to run the script and upsert data into Kontent.ai.
 
 ## Usage
 
 > [!NOTE]  
-> The migration assumes you have a content type with codename `rich_text`, containing a rich text element with codename `rich_text_element`. There should also be `default` language in your environment. Create the type manually or adjust the migration code to correspond with your type.
+> The migration assumes you have a content type with codename `rich_text`, containing a rich text element with codename `rich_text_element`. There should also be `default` language in your environment. Create the type manually or adjust the migration code to correspond with your type and language codename.
 
 1. Clone and install dependencies:
     ```bash
