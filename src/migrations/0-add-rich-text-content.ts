@@ -1,8 +1,8 @@
 import { ManagementClient } from "@kontent-ai/management-sdk";
 import {
-  parseHtml,
-  nodesToHtmlAsync,
-  AsyncNodeToStringMap,
+  parseHTML,
+  nodesToHTMLAsync,
+  AsyncNodeToHtmlMap,
 } from "@kontent-ai/rich-text-resolver";
 import { MigrationModule } from "@kontent-ai/data-ops";
 
@@ -13,7 +13,7 @@ import { MigrationModule } from "@kontent-ai/data-ops";
  *  - The recursively resolved child content (as string)
  *  - An optional context object, which in this case is the ManagementClient.
  */
-const transformers: AsyncNodeToStringMap<ManagementClient> = {
+const transformers: AsyncNodeToHtmlMap<ManagementClient> = {
   // Convert <i> to <em>
   i: async (_, children) => `<em>${children}</em>`,
 
@@ -25,7 +25,8 @@ const transformers: AsyncNodeToStringMap<ManagementClient> = {
         return;
       }
 
-      const src: string = node.attributes.src;
+      const src = node.attributes.src;
+
       if (!src) {
         reject("Invalid IMG tag: no src attribute.");
         return;
@@ -49,7 +50,7 @@ const transformers: AsyncNodeToStringMap<ManagementClient> = {
             descriptions: [
               {
                 language: { codename: "default" },
-                description: node.attributes.alt,
+                description: node.attributes.alt || "No description",
               },
             ],
             external_id: undefined,
@@ -75,10 +76,10 @@ const migration: MigrationModule = {
     const htmlInput = `<p>some normal text and <i>italic text requiring conversion from i to em tag</i></p><img class="content__image" src="https://assets-eu-01.kc-usercontent.com/a917b5bf-e2e1-011e-0a73-0b317b1e1c33/3efaba72-f8af-4e6f-ae02-15ca6d32f6b2/possessed-photography-jIBMSMs4_kA-unsplash.jpg" alt="White robot arm offering handshake">`;
     
     // 1. Parse HTML into DomNode array
-    const nodes = parseHtml(htmlInput);
+    const nodes = parseHTML(htmlInput);
 
     // 2. Asynchronously transform the nodes into HTML strings, uploading assets in the process
-    const transformedRichText = await nodesToHtmlAsync(
+    const transformedRichText = await nodesToHTMLAsync(
       nodes,
       transformers,
       apiClient
